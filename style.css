@@ -1,0 +1,265 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #f8fafc;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 12px 28px;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px);
+}
+
+/* Section Styling */
+section {
+    padding: 80px 60px;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #38bdf8;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #2f3e55;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    
+    transition: transform 0.3s ease;
+}
+
+.card .btn {
+    margin-top: auto;      /* pushes to bottom */
+    align-self: center;    /* centers horizontally */
+    width: auto;           /* VERY IMPORTANT */
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background: #334155;
+    z-index: 1;   /* important */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+/* Contact */
+.contact p {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1e293b;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p,
+    .card li {
+        font-size: 14px;
+    }
+}
+/* Social Icons */
+.social-icons {
+    margin-top: 25px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    margin: 0 15px;
+    color: #38bdf8;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0ea5e9;
+    transform: translateY(-6px);
+}
+
+/* Contact Icons */
+.contact-icons i {
+    margin-right: 10px;
+    color: #38bdf8;
+}
+
+/*Contacts Icons */
+.contact i {
+    margin-right: 10px;
+    color: #38bdf8;
+}
+
+.contact a {
+    color: #f8fafc;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #38bdf8;
+}
+
+/* removes underline */
+
+.social-icons a {
+    text-decoration: none;   
+}
+
+
+.btn-wrapper {
+    margin-top: auto;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1200px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}

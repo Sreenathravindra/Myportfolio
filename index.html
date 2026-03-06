@@ -36,7 +36,11 @@
     <a href="mailto:sreenathravindra045@gmail.com">
         <i class="fas fa-envelope"></i>
     </a>
-</div>
+    <div class="resume-btn">
+        <a href="assets/resume/sreenath_de_resume_045_aws.pdf" class="btn" download target="_blank">
+            <i class="fas fa-download"></i> Download Resume
+        </a>
+    </div>
 </section>
 
 <section id="about">
@@ -79,94 +83,97 @@
 
 <section id="projects">
     <h2>Projects</h2>
-    <div class="grid">
-            <div class="card">
-                <h3>Serverless Data Pipeline (S3 → Lambda → Glue → Redshift)</h3>
+    
+    
+        <div class="grid">
+                <div class="project-card">
+                    <h3>Data Ingestion & Validation Pipeline (S3 → Lambda → S3 - cleaned data)</h3>
 
-                <p>
-                    Built an event-driven serverless ETL pipeline where S3 file uploads trigger Lambda 
-                    for validation, Glue performs transformations, and Redshift storesanalytics-ready data.
-                </p>
+                    <p>
+                        Built an event-driven ingestion pipeline where files uploaded to Amazon S3 
+                        trigger AWS Lambda for schema validation and data quality checks. 
+                        Infrastructure is deployed automatically using AWS SAM and GitHub Actions CI/CD.
+                    </p>
                 
                     <ul>
-                        <li>Automated S3 event-based processing.</li>
-                        <li>Data validation using Python in Lambda.</li>
-                        <li>ETL transformation using AWS Glue.</li>
-                        <li>Loaded structured data into Amazon Redshift.</li>
-                        <li>Implemented IAM roles and logging.</li>
+                        <li>Automated S3 event-triggered Lambda execution.</li>
+                        <li>Validated incoming datasets using Python.</li>
+                        <li>Separated raw and clean data layers in Amazon S3.</li>
+                        <li>Deployed infrastructure using AWS SAM (CloudFormation).</li>
+                        <li>Implemented CI/CD pipeline using GitHub Actions.</li>
                     </ul>
                 
-                    <p><strong>Tech Stack:</strong> AWS S3, Lambda, Glue, Redshift, Python, SQL</p>
-                
-                    <div class="btn-wrapper">
-                        <a href="https://github.com/Sreenathravindra/lambda_s3_invokation.git" class="btn">View Project</a>
-                    </div>
+                    <p><strong>Tech Stack:</strong> AWS S3, Lambda, Python, AWS SAM, CloudFormation,    GitHub Actions</p>
+
+                        <div class="btn-wrapper">
+                            <a href="https://github.com/Sreenathravindra/lambda_s3_invokation.git"  class="btn" target="_blank" 
+                            rel="noopener noreferrer">View Project</a>
+                        </div>
+                </div>
+
+            <div class="project-card">
+                <h3>PySpark Batch Processing</h3>
+
+                <p>
+                    Designed a scalable batch data processing pipeline using PySpark to transform large semi-structured datasets stored in Amazon S3.
+                </p>
+            
+                <ul>
+                    <li>Handled large datasets using Spark DataFrames.</li>
+                    <li>Implemented transformations and aggregations.</li>
+                    <li>Stored partitioned Parquet files.</li>
+                    <li>Improved performance using partitioning and caching.</li>
+                </ul>
+            
+                <p><strong>Tech Stack:</strong> PySpark, AWS S3, Parquet, SQL</p>
+                <div class="btn-wrapper">
+                    <span class="btn disabled">Coming Soon</span>
+                </div>
             </div>
 
-        <div class="card">
-            <h3>PySpark Batch Processing</h3>
+            <div class="project-card">
+                <h3>Data Warehouse Design (Redshift)</h3>
 
-            <p>
-                Designed a scalable batch processing pipeline using PySpark
-                to transform large semi-structured datasets.
-            </p>
+                <p>
+                Designed and implemented a dimensional data warehouse using star schema modeling to support analytics and reporting workloads.
+                </p>
+
+                <ul>
+                    <li>Created fact and dimension tables.</li>
+                    <li>Defined primary and foreign key relationships.</li>
+                    <li>Optimized queries using distribution & sort keys.</li>
+                    <li>Loaded transformed data using Redshift COPY command.</li>
+                </ul>
+
+                <p><strong>Tech Stack:</strong> Amazon Redshift, SQL, Data Modeling</p>
+                <div class="btn-wrapper">
+                    <span class="btn disabled">Coming Soon</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>SQL Performance Optimization</h3>
+
+                <p>
+                Optimized complex SQL queries to improve performance and reduce execution time on large     relational datasets.
+                </p>
+
+                <ul>
+                    <li>Analyzed execution plans to identify bottlenecks.</li>
+                    <li>Implemented indexing strategies for faster lookups.</li>
+                    <li>Reduced query execution time using joins optimization.</li>
+                    <li>Improved aggregation performance on large tables.</li>
+                </ul>
+
+                <p><strong>Tech Stack:</strong> SQL, Indexing, Query Optimization</p>
+
+                <div class="btn-wrapper">
+                    <span class="btn disabled">Coming Soon</span>
+                </div>
         
-            <ul>
-                <li>Handled large datasets using Spark DataFrames.</li>
-                <li>Implemented transformations and aggregations.</li>
-                <li>Stored partitioned Parquet files.</li>
-                <li>Improved performance using partitioning and caching.</li>
-            </ul>
-        
-            <p><strong>Tech Stack:</strong> PySpark, AWS S3, Parquet, SQL</p>
-            <div class="btn-wrapper">
-                <a href="https://github.com/Sreenathravindra/lambda_s3_invokation.git" class="btn">View Project</a>
             </div>
         </div>
-
-        <div class="card">
-            <h3>Data Warehouse Design (Redshift)</h3>
-
-            <p>
-            Designed and implemented a dimensional data warehouse using 
-            star schema modeling for analytics and reporting.
-            </p>
-
-            <ul>
-                <li>Created fact and dimension tables.</li>
-                <li>Defined primary and foreign key relationships.</li>
-                <li>Optimized queries using distribution & sort keys.</li>
-                <li>Loaded transformed data using Redshift COPY command.</li>
-            </ul>
-
-            <p><strong>Tech Stack:</strong> Amazon Redshift, SQL, Data Modeling</p>
-            <div class="btn-wrapper">
-                <a href="https://github.com/Sreenathravindra/lambda_s3_invokation.git" class="btn">View Project</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>SQL Performance Optimization</h3>
-
-            <p>
-            Optimized complex SQL queries to improve performance and reduce execution time 
-            in large-scale relational datasets.
-            </p>
-
-            <ul>
-                <li>Analyzed execution plans to identify bottlenecks.</li>
-                <li>Implemented indexing strategies for faster lookups.</li>
-                <li>Reduced query execution time using joins optimization.</li>
-                <li>Improved aggregation performance on large tables.</li>
-            </ul>
-
-            <p><strong>Tech Stack:</strong> SQL, Indexing, Query Optimization</p>
-
-            <div class="btn-wrapper">
-                <a href="https://github.com/Sreenathravindra/lambda_s3_invokation.git" class="btn">View Project</a>
-            </div>
-        </div>
-    </div>
+    
 </section>
 
 <section id="contact" class="contact">

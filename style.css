@@ -127,6 +127,39 @@ section h2 {
     color: #cbd5e1;
 }
 
+.project-card {
+    background-color: #2f3e55;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+   
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+}
+
+.project-card .btn {
+    margin-top: auto;      /* pushes to bottom */
+    align-self: center;    /* centers horizontally */
+    width: auto;           /* VERY IMPORTANT */
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    background: #334155;
+    z-index: 1;   /* important */
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    color: #cbd5e1;
+}
+
+
 /* Contact */
 .contact p {
     font-size: 18px;
@@ -262,4 +295,23 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: auto;
+}
+
+/* resume button */ 
+.resume-btn 
+{ 
+    margin-top: 30px; 
+    text-align: center;
+} 
+.resume-btn .btn 
+{   
+    width: fit-content; 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: 600; 
+    color: #0f172a; 
+} 
+.resume-btn .btn:hover 
+{ 
+    transform: translateY(-4px); 
 }

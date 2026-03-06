@@ -93,8 +93,8 @@ section h2 {
 /* Cards */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .card {
@@ -221,6 +221,7 @@ footer {
         padding: 20px;
     }
 
+
     .card h3 {
         font-size: 18px;
     }
@@ -228,6 +229,12 @@ footer {
     .card p,
     .card li {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
 /* Social Icons */
@@ -277,8 +284,12 @@ footer {
 
 .btn-wrapper {
     margin-top: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
+
 * {
     box-sizing: border-box;
 }
